@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>money</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <h1>Money</h1>
+    <p>choose Date for operation</p>
+    <input type="date" data-polyfill="all" id="appTime" data-format="dd-MM-yyyy" value="17-05-2016" placeholder="date" />
+    <p>List</p>
+    <span>
+        <input id="basecat" type="text" /><button class="addcat" onclick="addcat()" >add new category</button>
+    </span>
+    <ul id="list" name="list" >
+    </ul>
+
+    start time <input type="date" data-polyfill="all" id="startTime" data-format="dd-MM-yyyy" value="15-05-2016" placeholder="date" />
+    end time <input type="date" data-polyfill="all" id="endTime" data-format="dd-MM-yyyy" value="18-05-2016" placeholder="date" />
+    <button id="showGraphic">show graphic</button>
+    <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+
+    <script src="./js/canvasjs.min.js"></script>
+    <script src="./js/pie.js"></script>
+    <script src="./js/script.js"></script>
+    <script>
+        var moneyData = new myMoneyDataCreater(list.id);
+        moneyData.get(renderDataToHTML(list));
+        showGraphic.onclick=function(){
+            moneyData.save();
+        }
+    </script>
+
+    <script src="./bower_components/better-dom.js"></script>
+    <script src="./bower_components/better-i18n-plugin.js"></script>
+    <script src="./bower_components/better-time-element.js"></script>
+    <script src="./bower_components/better-emmet-plugin.js"></script>
+    <script src="./bower_components/better-dateinput-polyfill.js"></script>
+</body>
+
+</html>

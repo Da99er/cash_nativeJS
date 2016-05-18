@@ -1,0 +1,40 @@
+ul {
+    border: 1px solid #882;
+}
+
+li {
+    border: 1px solid #282;
+    margin:1px;
+}
+i{
+    color:#FF00FC;
+}
+
+input{
+    margin: 5px;
+}
+
+body,
+input {
+    font-family: sans-serif;
+    font-size: 1em;
+}
+
+.test-form {
+    margin: 3em;
+    width: 20em;
+}
+
+.test-form input[type=text],
+.test-form input[type=date] {
+    padding: 0.5em;
+    border: 2px solid #555;
+    margin: 0;
+    vertical-align: baseline;
+    width: 10em;
+}
+
+.test-form input[name=start] {
+    text-align: center;
+    background: yellow;
+}
